@@ -63,7 +63,7 @@ pnpm install
 SUPABASE_URL=https://<project-ref>.supabase.co
 SUPABASE_ANON_KEY=sb_publishable_xxxxxxxx
 
-BASIC_AUTH_USER=mew01
+BASIC_AUTH_USER=<登录用户名>
 BASIC_AUTH_PASS=<本地调试密码>
 ```
 
