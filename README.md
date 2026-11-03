@@ -1,5 +1,7 @@
 # 学生学习反馈系统
 
+[![ci](https://github.com/greatwoo01/feedbackSystem/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/greatwoo01/feedbackSystem/actions/workflows/ci.yml)
+
 教师课后评价的录入、查询与家长反馈文案生成工具。单人使用的内部系统，部署在 Cloudflare Workers 上，数据库托管在 Supabase。
 
 ## 功能
