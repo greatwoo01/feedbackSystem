@@ -1,0 +1,53 @@
+{
+  "name": "projects",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "preinstall": "npx only-allow pnpm",
+    "lint": "eslint",
+    "ts-check": "tsc -p tsconfig.json",
+    "lint:build": "eslint . --quiet",
+    "validate": "pnpm run --parallel '/^(ts-check|lint:build)$/'",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "backup": "node scripts/backup.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.95.3",
+    "html-to-image": "^1.11.13",
+    "lucide-react": "^0.468.0",
+    "next": "16.4.4",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "recharts": "2.15.4",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.15",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.4",
+    "only-allow": "^1.2.2",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "wrangler": "^4.156.1"
+  },
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "pnpm": ">=9.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd",
+      "unrs-resolver",
+      "sharp"
+    ]
+  }
+}
